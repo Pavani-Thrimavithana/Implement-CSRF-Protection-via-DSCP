@@ -12,9 +12,9 @@
 				<?php
 					require_once 'token.php';
 					$val = $_POST["token"];
-					if(isset($_POST['updatepost'])){
+					if(isset($_POST['update'])){
 						if(token::checkToken($val,$_COOKIE['csrfCookie'])){
-							echo "Post:".$_POST['updatepost'];		
+							echo "Order Quantity: ".$_POST['update'];		
 						}
 						else{
 						echo "wrong".$_COOKIE['csrfCookie'];
